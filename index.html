@@ -6,12 +6,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width">
 <script src='//libtl.com/sdk.js' data-zone='12129118' data-sdk='show_12129118'></script>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 :root { --bg: #ffffff; --text: #111111; }
 .dark { --bg: #0f0f0f; --text: #f5f5f5; }
 body { font-family: sans-serif; text-align: center; background: var(--bg); color: var(--text); transition: 0.3s; padding: 50px 20px; }
-button { font-size: 24px; padding: 20px 40px; cursor: pointer; background: #ff5722; color: white; border: none; border-radius: 10px; }
+button { font-size: 24px; padding: 20px 40px; cursor: pointer; background: #ff5722; color: white; border: none; border-radius: 10px; margin: 10px; }
 #toggle-night { position: fixed; bottom: 20px; right: 20px; padding: 12px 16px; border-radius: 50px; font-size: 20px; z-index: 9999; background: var(--text); color: var(--bg); }
 </style>
 </head>
@@ -23,10 +22,9 @@ button { font-size: 24px; padding: 20px 40px; cursor: pointer; background: #ff57
 <script>
 function orderFood() {
 show_12129118().then(() => {
-Telegram.WebApp.showAlert('Bạn nhận được 1 Burger!');
+alert('Bạn nhận được 1 Burger!');
 })
 }
-Telegram.WebApp.ready();
 const btn = document.getElementById('toggle-night');
 const isDark = localStorage.getItem('darkMode') === 'true';
 if(isDark) {
