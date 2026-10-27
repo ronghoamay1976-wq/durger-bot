@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Durger King</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='//libtl.com/sdk.js' data-zone='12129118' data-sdk='show_12129118'></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #fff3e0; }
+        button { font-size: 24px; padding: 20px 40px; background: #ff5722; color: white; border: none; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🍔 Durger King</h1>
+    <p>Bấm để nhận Burger miễn phí</p>
+    <button onclick="orderFood()">Order Food</button>
+    <script>
+        function orderFood() {
+            show_12129118().then(() => {
+                Telegram.WebApp.showAlert('Bạn nhận được 1 Burger!');
+            })
+        }
+        Telegram.WebApp.ready();
+    </script>
+</body>
+</html>
